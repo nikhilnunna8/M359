@@ -52,6 +52,12 @@ public class Show {
     public void setCity(String city) {
         this.city = city;
     }
+
+    /**
+     * Uses the information from a show class object to print out it's contents
+     * in a formatted string.
+     * @return String containing a formatted output
+     */
     public String toString(){
         String out = "";
         int numSpaces = 0;
