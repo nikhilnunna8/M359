@@ -11,7 +11,8 @@ public class TicketMaster {
     File myFile = new File("showData.txt");
 
     /**
-     *
+     * Reads in the data from myFile by using Scanner methods. Creates a show object based on the reads from the
+     * Scanner methods before adding them to a ArrayList containing all the shows.
      * @throws java.io.FileNotFoundException
      */
     public void readInData() throws java.io.FileNotFoundException{
