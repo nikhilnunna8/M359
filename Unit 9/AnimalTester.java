@@ -33,6 +33,9 @@ public class AnimalTester
        // 4. Try to summarize in 2-3 sentences WHAT you observed in this code.
        //  I observed that different methods could be called in a array even though they all share the same name due to the
        //  methods overriding. Also, the subclasses of a parent class are still considered as objects of the parent class
+       Pig b = new Pig("Max", true);
+       Pig a = b;
+       System.out.println(a);
    }
    
 }

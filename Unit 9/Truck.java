@@ -16,15 +16,22 @@ public class Truck extends Automobile{
         return super.toString() + "\n This truck belongs to the company " + companyWorkFor;
     }
     public double repairCost(){
-        return (super.repairCost() * super.getMileage());
+        if(cargo) {
+            return (super.repairCost());
+        }
+        return 10000;
     }
     public void fillCargo(int numBoxes){
         if(cargo){
             if(numBoxes > cargoSpace){
                 System.out.println("The Truck doesn't have enough space");
             }
+            else{
+                cargoSpace -= numBoxes;
+            }
 
         }
+
     }
 
 }
