@@ -4,8 +4,8 @@ public class Truck extends Automobile{
     private int cargoSpace;
 
 
-    public Truck(double mileage, String brand, int age, String company, boolean c){
-        super(mileage, brand, 6, 2, age);
+    public Truck(double mileage, String brand, double price, String company, boolean c){
+        super(mileage, brand, 6, 2, price);
         companyWorkFor = company;
         cargo = c;
         if(cargo){
@@ -16,10 +16,15 @@ public class Truck extends Automobile{
         return super.toString() + "\n This truck belongs to the company " + companyWorkFor;
     }
     public double repairCost(){
-        if(cargo) {
-            return (super.repairCost());
+        boolean y = super.inCrash();
+        if(y) {
+            if (cargo) {
+                return (super.repairCost(y) + (10 * cargoSpace));
+
+            }
+            return super.repairCost(y);
         }
-        return 10000;
+        return 0.00;
     }
     public void fillCargo(int numBoxes){
         if(cargo){

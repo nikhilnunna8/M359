@@ -1,18 +1,18 @@
 public class Car extends Automobile{
     private boolean sport;
-    public Car(double m, String b, int a, boolean s){
-        super(m,b,a);
+    public Car(double m, String b, double p, boolean s){
+        super(m,b,p);
         sport = s;
         if(sport == true){
             super.setDoorNum(2);
         }
     }
-    public Car(double m, String b, int a){
-        super(m,b,4,4,a);
+    public Car(double m, String b, double p){
+        super(m,b,4,4,p);
         sport = false;
     }
     public double repairCost(){
-        double x = super.repairCost();
+        double x = super.repairCost(super.inCrash());
         if(sport){
             x *=10;
         }

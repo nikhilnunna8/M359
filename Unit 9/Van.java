@@ -1,8 +1,8 @@
 public class Van extends Car{
     private String familyName;
     private boolean diesel;
-    public Van(double m, String b, int a, String family, boolean diesel){
-         super(m,b,a);
+    public Van(double m, String b, double p, String family, boolean diesel){
+         super(m,b,p);
          this.diesel = diesel;
          familyName = family;
     }
@@ -17,21 +17,19 @@ public class Van extends Car{
         }
         return out;
     }
+
+    /**
+     * If the van uses diesel, its repair cost is higher and calls the car class repairCost() to see if it's in a crash
+     * and to calculate its repair price. If the van doesn't use diesel, it uses the car class's repairCost() with no
+     * changes.
+     * @return a double containing the repair price of the van object
+     */
     public double repairCost(){
-        if(super.inCrash()){
-            if(super.getMileage() < 100){
-                if(diesel) {
-                    double totCost = (4 * 4 * 5000) / (super.getAge() + 10) + 1000;
-                    return totCost;
-                }
-                else{
-                    double totCost = (4 * 4 * 5000) / (super.getAge() + 10);
-                    return totCost;
-                }
-            }
-            double totCost = (4 * 4 * 5000)/(super.getAge()*super.getMileage() *.1 + 10);
-            return totCost;
+        if(diesel){
+            return super.repairCost() + 3000;
         }
-        return 0;
+        return super.repairCost();
+
+
     }
 }
