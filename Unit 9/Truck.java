@@ -1,3 +1,6 @@
+// Teacher: Mister Anthony DeStephano
+// Students: The Nikhil Nunna, The Mantra Mittal
+// Period 2
 public class Truck extends Automobile{
     private String companyWorkFor;
     private boolean cargo;
