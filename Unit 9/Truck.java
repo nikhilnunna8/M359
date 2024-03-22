@@ -15,6 +15,10 @@ public class Truck extends Automobile{
             cargoSpace = 10; //Ubox Containers
         }
     }
+    /**
+    * Returns a formatted string with information about the truck object.
+    * @return Returns a string formatted to use the parent class (Automobile's) toString and the company the truck works for.
+    */
     public String toString(){
         return super.toString() + "\n This truck belongs to the company " + companyWorkFor;
     }
