@@ -15,6 +15,13 @@ public class Truck extends Automobile{
     public String toString(){
         return super.toString() + "\n This truck belongs to the company " + companyWorkFor;
     }
+    /**
+     * Calculates the repair cost for the truck class.
+     *
+     * @return The repair cost as a double containing whether if the vehicle has been in a crash and calculates
+     *         the repair cost based on the amount of cargoSpace and the Automobile Class's repairCost(). If the vehicle is not in a crash,
+     *         or if it's not a cargo vehicle, the repair cost is just the Automobile class's repairCost method.
+     */
     public double repairCost(){
         boolean y = super.inCrash();
         if(y) {
@@ -26,6 +33,13 @@ public class Truck extends Automobile{
         }
         return 0.00;
     }
+    /**
+     * Fills the cargo space of the truck with the specified number of boxes.
+     *
+     * @param numBoxes The number of boxes to fill the cargo space with.
+     *                 If the cargo space of the truck is less than this number,
+     *                 a message is printed indicating insufficient space.
+     */
     public void fillCargo(int numBoxes){
         if(cargo){
             if(numBoxes > cargoSpace){
