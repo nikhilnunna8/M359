@@ -1,3 +1,6 @@
+// Teacher: Mr.DeStephano
+// Students: The Nikhil Nunna, The Mantra Mittal
+// Period 2
 public class AutombileTester {
     public static void main(String[] args) {
         Automobile[][] highwayLine = new Automobile[3][4];
