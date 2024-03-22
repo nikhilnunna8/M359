@@ -1,6 +1,7 @@
 // Teacher: Mr.DeStephano
 // Students: The Nikhil Nunna, The Mantra Mittal
 // Period 2
+// These Automobile classes simulate a highway crash scenario and is intended to show the repair costs of cars currently on the highway.
 public class AutombileTester {
     public static void main(String[] args) {
         Automobile[][] highwayLine = new Automobile[3][4];
