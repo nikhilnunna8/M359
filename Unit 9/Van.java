@@ -9,6 +9,11 @@ public class Van extends Car{
          this.diesel = diesel;
          familyName = family;
     }
+    /**
+     * Returns a string with info about the van and type of engine.
+     * @return A string formatted with information about the van using parent class getter methods, including brand, mileage,
+     *         and type of engine (diesel or gas).
+     */
     public String toString(){
         String out = "";
         out += "This Van is from " + super.getBrand() + " and has been driven for + " + super.getMileage() + " miles.";
