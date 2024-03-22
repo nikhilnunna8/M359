@@ -1,6 +1,6 @@
-// Lead Artist: Mister Anthony DeStephano
-// Producers/Prodigies: The Nikhil Nunna, The Mantra Mittal
-// Scene 2
+// Teacher: Mister Anthony DeStephano
+// Students: The Nikhil Nunna, The Mantra Mittal
+// Period 2
 public class Automobile {
     //preworkout buffet
     private double price;
@@ -21,6 +21,12 @@ public class Automobile {
         brand = b;
         price = p;
     }
+    /**
+     * Simulates whether a vehicle is involved in a crash with a crash rate of 50%.
+     *
+     * @return true if the vehicle is in a crash,
+     *         false otherwise.
+     */
     public static boolean inCrash(){
         if(Math.random() < 0.5){
             return true;
@@ -28,6 +34,13 @@ public class Automobile {
         System.out.println("\nThis car is safe.");
         return false;
     }
+    /**
+     * Calculates the repair cost for the Automobile based on the boolean indicating if it was in a crash or not.
+     * @param y A boolean indicating whether the Automobile was in a crash.
+     * @return The repair cost as a double value. If the vehicle was in a crash, the repair
+     *         cost is calculated based on the vehicle's price and mileage and outputs a message. If the vehicle
+     *         was not in a crash, the repair cost is $0.00.
+     */
     public double repairCost(boolean y){
         if(y){
             System.out.println("Your vehicle was in a crash!");
@@ -43,6 +56,10 @@ public class Automobile {
 
         return 0.00;
     }
+    /**
+     * Returns a string containing information of the Automobile.
+     * @return A string formatted to have the wheels, doorNum, brand, and mileage of the Automobile.
+     */
     public String toString(){
         String out = "";
         out += "This Automobile has " + wheelNum + " wheels and " + doorNum + " doors.";
